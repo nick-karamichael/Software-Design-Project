@@ -108,14 +108,53 @@
 			color: #fff;
 			box-shadow: none;
 		}
-		.check-box{
+		/*
+		.checkbox{
 			border:none;
 			border-radius: none;
 			padding: none;
 			box-shadow: none;
 			cursor:pointer;
-			
+			transform: scale(2);
+		}*/
+
+		/* Custom checkbox */
+		.checkbox {
+			display: inline-block;
+			position: relative;
+			padding-left: 35px;
+			margin-bottom: 12px;
+			cursor: pointer;
+			font-size: 22px;
+			user-select: none;
 		}
+
+		/* Hide the browser's default checkbox */
+		.checkbox input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		/* Custom checkbox design */
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			background-color: #fff;
+			border: 2px solid #000;
+			border-radius: 50%;
+		}
+
+		/* When checkbox is checked, change color */
+		.checkbox input:checked + .checkmark {
+			background-color: #f00;
+		}
+
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
@@ -128,9 +167,12 @@
 
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="password">
-
-			<label for="role"> Researcher:</label><br>
-			<input type="checkbox" id="role" name="role" value="Researcher" class="check-box">
+			
+			<label class="checkbox">
+				<input type="checkbox" id="role" name="role" value="Researcher">
+				<span class="checkmark"></span>
+				Researcher
+			</label>
 			
 			<button>Sign Up</button>
 
