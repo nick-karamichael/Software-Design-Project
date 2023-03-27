@@ -89,6 +89,9 @@
 		}
 
 		.back-button {
+			position:absolute;
+			top: 0;
+  			left: 0;
 			background-color: rgb(255, 255, 255);
 			color: #000000;
 			border: 2px solid #000;
@@ -97,6 +100,7 @@
 			font-size: 2rem;
 			margin: 1rem;
 			cursor: pointer;
+			width: 120px;
 			transition: background-color 0.3s ease;
 			text-transform: uppercase;
 			letter-spacing: 2px;
@@ -161,9 +165,9 @@
 <body>
 	<div class="container">
 		<h1>Signup</h1>
-		<form action="process_signup.php" method="post"> 
-			<label for="Email">Email:</label>
-			<input type="text" id="Email" name="Email" required>
+		<form action="process_signup" method="post">
+			<label for="username">Email:</label>
+			<input type="text" id="username" name="username" required>
 
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="password" required>
