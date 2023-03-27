@@ -87,6 +87,28 @@
 			color: rgb(255, 255, 255);
 			box-shadow: none;
 		}
+
+		.back-button {
+			background-color: rgb(255, 255, 255);
+			color: #000000;
+			border: 2px solid #000;
+			border-radius: 50px;
+			padding: 1rem 2rem;
+			font-size: 2rem;
+			margin: 1rem;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			box-shadow: 2px 2px #000;
+		}
+		
+		.back-button:hover {
+			background-color: #000;
+			color: #fff;
+			box-shadow: none;
+		}
+
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
@@ -94,12 +116,18 @@
 	<div class="container">
 		<h1>Signup</h1>
 		<form>
-			<label for="username">Username</label>
+			<label for="username">Username:</label>
 			<input type="text" id="username" name="username">
-			<label for="password">Password</label>
+
+			<label for="password">Password:</label>
 			<input type="password" id="password" name="password">
+
+			<label for="role"> Researcher:</label><br>
+			<input type="checkbox" id="role" name="role" value="Researcher">
+			
 			<button>Sign Up</button>
-			<input type="button" value="⬅" onclick="history.back()">
+
+			<input type="button" value="⬅" onclick="history.back()" class="back-button">
 		</form>
 	</div>
 </body>

@@ -10,8 +10,7 @@
 			font-family: 'Press Start 2P', cursive;
 			margin: 0;
 			padding: 0;
-			background-repeat: repeat;
-			background-size: 200px;
+			
 		}
 		
 		.container {
@@ -28,9 +27,13 @@
 			color: #f00;
 			text-align: center;
 			text-shadow: 3px 3px #000;
-			border: 3px solid #000;
-			border-style: inset;
-			padding: 1rem;
+			border: 2px solid #000;
+			padding: 0.5rem 1rem;
+			background-color: #fff;
+			box-shadow: 2px 2px #000;
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 		}
 		
 		form {
@@ -43,7 +46,12 @@
 		
 		label {
 			font-size: 2rem;
-			margin-bottom: 1rem;
+			margin-top: 2rem;
+			text-align: center;
+			text-shadow: 2px 2px #000;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			display: block;
 		}
 		
 		input[type="text"], input[type="password"] {
@@ -54,15 +62,15 @@
 			border-radius: 50px;
 			margin-bottom: 1rem;
 			text-align: center;
-			width: 20rem;
+			width: 80%;
+			max-width: 400px;
 			background-color: #fff;
-			color: #f00;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			box-shadow: 2px 2px #000;
 		}
 		
-		button[type="submit"] {
+		button {
 			background-color: #f00;
 			color: #fff;
 			border: none;
@@ -77,11 +85,35 @@
 			box-shadow: 2px 2px #000;
 		}
 		
-		button[type="submit"]:hover {
+		button:hover {
 			background-color: #000000;
 			color: rgb(255, 255, 255);
 			box-shadow: none;
 		}
+
+		.back-button {
+			background-color: rgb(255, 255, 255);
+			color: #000000;
+			border: 2px solid #000;
+			border-radius: 50px;
+			padding: 1rem 2rem;
+			font-size: 2rem;
+			margin: 1rem;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			box-shadow: 2px 2px #000;
+			width: 80%;
+			max-width: 400px;
+		}
+
+		.back-button:hover {
+			background-color: #000;
+			color: #fff;
+			box-shadow: none;
+		}
+
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
@@ -91,10 +123,13 @@
 		<form>
 			<label for="username">Username:</label>
 			<input type="text" id="username" name="username" required>
+
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="password" required>
+
 			<button type="submit">Login</button>
-			<input type="button" value="⬅" onclick="history.back()">
+			
+			<input type="button" value="⬅" onclick="history.back()" class="back-button">
 		</form>
 	</div>
 </body>
