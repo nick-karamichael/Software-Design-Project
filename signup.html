@@ -161,12 +161,12 @@
 <body>
 	<div class="container">
 		<h1>Signup</h1>
-		<form>
-			<label for="username">Email:</label>
-			<input type="text" id="username" name="username">
+		<form action="process_signup.php" method="post"> 
+			<label for="Email">Email:</label>
+			<input type="text" id="Email" name="Email" required>
 
 			<label for="password">Password:</label>
-			<input type="password" id="password" name="password">
+			<input type="password" id="password" name="password" required>
 			
 			<label class="checkbox">
 				<input type="checkbox" id="role" name="role" value="Researcher">
