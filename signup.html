@@ -163,30 +163,67 @@
 			z-index: -1;
 		}
 
-	</style>
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
-<body>
-	<div class="blocky-background"></div>
-	<div class="container">
-		<h1>Signup</h1>
-		<form action="process_signup" method="post">
-			<label for="username">Email:</label>
-			<input type="text" id="username" name="username" required>
-
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+		<!--code to connect to the firebase database-->
+		<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+		<script src="firebase-init.js"></script>
+	  </head>
+	  
+	  <body>
+		<div class="blocky-background"></div>
+		<div class="container">
+		  <h1>Signup</h1>
+		  <form>
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email" required>
+	  
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="password" required>
-			
+	  
 			<label class="checkbox">
-				<input type="checkbox" id="role" name="role" value="Researcher">
-				<span class="checkmark"></span>
-				Researcher
+			  <input type="checkbox" id="role" name="role" value="Researcher">
+			  <span class="checkmark"></span>
+			  Researcher
 			</label>
-			
-			<button>Sign Up</button>
-
+	  
+			<button type="submit">Sign Up</button>
+	  
 			<input type="button" value="⬅" onclick="history.back()" class="back-button">
-		</form>
-	</div>
-</body>
-</html>
+		  </form>
+		</div>
+		<script>
+			// Access the signup form element
+			var signupForm = document.querySelector('form');
+		
+			// Add an event listener to the submit event of the form
+			signupForm.addEventListener('submit', function(event) {
+			  // Prevent the default form submission behavior
+			  event.preventDefault();
+		
+			  // Get the email, password, and role fields from the form
+			  var email = document.getElementById('email').value;
+			  var password = document.getElementById('password').value;
+			  var role = document.getElementById('role').checked ? 'Researcher' : 'Participant';
+		
+			  // Add the user data to the Firebase database
+			  var usersRef = firebase.firestore().collection('Signup');
+			  usersRef.add({
+				email: email,
+				password: password,
+				role: role
+			  })
+			  .then(function(docRef) {
+				console.log('User added with ID: ', docRef.id);
+				// Redirect to the success page
+				window.location.href = 'success.html';
+			  })
+			  .catch(function(error) {
+				console.error('Error adding user: ', error);
+			  });
+			});
+		  </script>
+	</body>
+	  
+	  </html>
