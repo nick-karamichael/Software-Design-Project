@@ -1,2 +1,2 @@
-#FE4CF4
-#200C5E
+Pink #FE4CF4
+Darkblue #200C5E
