@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<title>PCG Evaluation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			color: #ffffff;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #FE4CF4;
+			color: #ffffff;
+			text-align: center;
+			height: 20px;
+			padding: 1em;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: 0;
+			line-height: 0em;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
+
+		.text-boxes {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.text-box {
+			width: 30%;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 20px;
+			text-align: center;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+
+		.text-box img {
+			width: 100%;
+			height: 66.67%;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.text-box h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.text-box p {
+			font-size: 16px;
+			color: #666;
+		}
+
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			padding: 2em;
+			text-align: center;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.settings-button {
+			height: 20px;
+			position: relative;
+			float: right;
+		}
+
+		.dropdown-menu {
+			display: none;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 1;
+		}
+
+		.settings-button:hover .dropdown-menu {
+			display: block;
+			background-color: #fff;
+			padding: 10px;
+		}
+		.blocky-background {
+			background: url('Resources/BountifulAlienatedFugu.gif') center center no-repeat;
+			background-size: cover;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>PCG Evaluation</Em></h1>
+
+		<ul>
+			<li class="settings-button">
+				<a href="#"><i class="fa fa-cog"></i></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Log Out</a></li>
+					<li><a href="#">Account Settings</a></li>
+					<li><a href="#">Preferences</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+	</header>
+	<div class="blocky-background"></div>
+	<div class="text-boxes">
+		<div class="text-box">
+			<img src="image1.jpg" alt="Image 1">
+			<h2>Heading 1</h2>
+			<p>Description 1</p>
+		</div>
+		<div class="text-box">
+			<img src="image2.jpg" alt="Image 2">
+			<h2>Heading 2</h2>
+			<p>Description 2</p>
+		</div>
+		<div class="text-box">
+			<img src="image3.jpg" alt="Image 3">
+			<h2>Heading 3</h2>
+			<p>Description 3</p>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
