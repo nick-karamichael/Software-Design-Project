@@ -86,12 +86,14 @@
 		}
 
 		.BtnContainer {
+			display: flex;
 			justify-content: center;
 			align-items: center;
-			flex-direction: row;
 		}
 
 		.button {
+			font-family: 'Press Start 2P', cursive;
+			background-color: #FE4CF4;
 			padding: 10px 20px;
 			border: 2px solid black;
 			border-radius: 5px;
@@ -101,6 +103,7 @@
 		}
 
 		.settings-button {
+			color: #FE4CF4;
 			height: 20px;
 			position: relative;
 			float: right;
@@ -157,9 +160,9 @@
 			<li class="settings-button">
 				<a href="#"><i class="fa fa-cog"></i></a>
 				<ul class="dropdown-menu">
-					<li><a href="#" onclick=logout()>Log Out</a></li>
-					<li><a href="#">Account Settings</a></li>
-					<li><a href="#">Preferences</a></li>
+					<li><a href="#"onclick=logout()>Log Out</a></li>
+					<li><a href="#"onclick=Settings()>Settings</a></li>
+					<li><a href="#"onclick=Profile()>Profile</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -168,6 +171,7 @@
 	<div class="BtnContainer">
 		<button class="button" onclick="currentFunction()">Current</button>
 		<button class="button" onclick="newFunction()">New</button>
+	</div>
 		<div class="blocky-background"></div>
 		<div id="scrollable-box">
 			<div class="text-boxes">
