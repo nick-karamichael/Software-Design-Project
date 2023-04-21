@@ -31,20 +31,40 @@
             line-height: 0em;
             letter-spacing: 0.1em;
         }
-
+        .text-box {
+			width: 30%;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 20px;
+			text-align: center;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
         /* Style for the image */
         .header-image {
             width: 100%;
-            object-fit: cover;
-            margin-bottom: 20px;
+			height: 66.67%;
+			object-fit: cover;
+			margin-bottom: 20px;
         }
+        .header-h2 {
+			font-size: 24px;
+			color: #FE4CF4;
+			margin-bottom: 10px;
+		}
+        /* This class is used to style the description of the header image */
+		.header p {
+			font-size: 16px;
+			color: #666;
+		}
 
         /* Style for the text boxes */
         .scroll-box {
             display: block;
             margin: 0 auto;
             width: 80%;
-            height: 290px;
+            height: 250px;
             overflow-y: scroll;
         }
 
@@ -128,46 +148,48 @@
     <div style="text-align: center;">
         <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHJldHJvJTIwZ2FtaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt="Header Image" id="header-image">
+            <header-h2>Heading 1</header-h2>
+            <header p>Description 1</header p>
     </div>
     <div class="scroll-box">
-        <h2>Question 1:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 1:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 2:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 2:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 3:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 3:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 4:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 4:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 5:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 5:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 6:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 6:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 7:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 7:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 8:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 8:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 9:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 9:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
 
-        <h2>Question 10:</h2>
-        <p>Enter your answer here:</p>
+        <header-h2>Question 10:</header-h2>
+        <header p>Enter your answer here:</header p>
         <textarea rows="5" cols="50"></textarea>
     </div>
 </body>
