@@ -1,1 +1,1 @@
-# Software-Design-Project
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/nick-karamichael/Software-Design-Project/tree/DB-Setup.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/nick-karamichael/Software-Design-Project/tree/DB-Setup)
